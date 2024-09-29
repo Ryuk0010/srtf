@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@300;500;700&display=swap');
 
 * {
     margin: 0;
@@ -7,231 +7,182 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Header & Navigation */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light text color for contrast */
     padding: 20px;
-    background-color: #333;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.logo h1 a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.8rem;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-    transform: scale(1.05);
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+/* Page Title */
+h1 {
     text-align: center;
-    overflow: hidden;
-}
-
-.hero video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-    filter: brightness(40%) blur(3px);
-    transition: filter 0.5s;
-}
-
-.hero-content {
-    z-index: 1;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.hero-content h2 {
-    font-size: 3.5rem;
-    margin-bottom: 15px;
+    font-size: 2.8rem;
+    color: #e0e0e0; /* Light color */
+    margin-bottom: 20px;
+    font-family: 'Nunito', sans-serif;
     font-weight: 700;
     letter-spacing: 2px;
-    text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
-.hero-content p {
-    font-size: 1.5rem;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.8;
-    padding: 0 20px;
+h1:hover {
+    color: #82c0ff; /* Soft blue on hover */
 }
 
-/* Keyframe animation for hero content */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-
-/* Algorithm Cards */
-.algorithm-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Always show 4 columns */
-  gap: 20px;
-  padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-
-.card {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden;
-    position: relative;
-}
-
-.card h3 {
-    font-size: 2rem;
+h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #ccc; /* Slightly lighter for section headers */
+    font-size: 1.4rem;
+    margin-top: 15px;
     margin-bottom: 10px;
-    color: #333;
-    position: relative;
-    z-index: 1;
 }
 
-.card p {
-    font-size: 1rem;
-    color: #666;
+/* Preferences Section */
+ol.preferences {
+    list-style-type: none;
+    font-size: 1.1rem;
+    padding-left: 0;
     margin-bottom: 20px;
 }
 
-.card a {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
+ol.preferences li {
+    margin-bottom: 10px;
 }
 
-.card a:hover {
-    background-color: #555;
-    transform: scale(1.1);
-}
-
-.card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Background circles for visual effect */
-.card::before {
-    content: '';
-    position: absolute;
-    top: -60px;
-    right: -60px;
-    width: 200px;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-    z-index: 0;
-}
-
-.card::after {
-    content: '';
-    position: absolute;
-    bottom: -60px;
-    left: -60px;
-    width: 200px;
-    height: 200px;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-    z-index: 0;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 30px;
-    background-color: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 50px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
-}
-
-footer p {
-    margin: 0;
-    font-size: 1rem;
-}
-
-/* Scroll-to-top button */
-#scroll-top {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 50%;
+#priority-toggle-btn {
+    padding: 8px 15px;
+    border: none;
+    background-color: #2a2a2a; /* Dark button background */
+    color: #82c0ff; /* Soft blue text */
+    border-radius: 20px;
     cursor: pointer;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
-    display: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-#scroll-top:hover {
-    background-color: #555;
+#priority-toggle-btn:hover {
+    background-color: #82c0ff; /* Light blue on hover */
+    color: white; /* White text on hover */
+    transform: scale(1.05);
+}
+
+#priority-preference {
+    margin-right: 10px;
+}
+
+/* Table Styling */
+table.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #2a2a2a; /* Dark table background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    font-size: 1rem;
+    color: #e0e0e0; /* Light text color */
+}
+
+th {
+    background-color: #3a3a3a; /* Slightly lighter for headers */
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #82c0ff; /* Soft blue */
+}
+
+td input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    background-color: #444; /* Dark input background */
+    border: 1px solid #666; /* Slightly lighter border */
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+    color: #e0e0e0; /* Light text color */
+}
+
+td input[type="number"]:focus {
+    outline: none;
+    border-color: #82c0ff; /* Soft blue on focus */
+}
+
+/* Buttons */
+button {
+    background-color: #2a2a2a; /* Dark button background */
+    color: #82c0ff; /* Soft blue text */
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: #82c0ff; /* Light blue on hover */
+    color: white; /* White text on hover */
+    transform: scale(1.05);
+}
+
+/* Context Switch and Time Quantum */
+#context-switch-div, #time-quantum {
+    margin-top: 20px;
+}
+
+#context-switch, #tq {
+    padding: 8px;
+    background-color: #444; /* Dark input background */
+    border: 1px solid #666; /* Slightly lighter border */
+    border-radius: 8px;
+    width: 100px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+    color: #e0e0e0; /* Light text color */
+}
+
+#context-switch:focus, #tq:focus {
+    outline: none;
+    border-color: #82c0ff; /* Soft blue on focus */
+}
+
+/* Output Section */
+#output {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #2a2a2a; /* Dark output background */
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    font-size: 1.2rem;
+    color: #e0e0e0; /* Light text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#output:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-content h2 {
-        font-size: 2.5rem;
+    h1 {
+        font-size: 2rem;
     }
 
-    .hero-content p {
-        font-size: 1.2rem;
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
     }
 }
